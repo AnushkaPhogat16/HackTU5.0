@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chloropleth Map with Markers</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { height: 600px; }
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+    var map = L.map('map').setView([26.8615, 75.8022], 13);
+
+    // Add base tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Define GeoJSON data with multiple points
+    var geoJsonData = [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [75.80216378428986, 26.863140881324643]
+            },
+            "properties": {
+                "label": 1
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [75.801, 26.864]
+            },
+            "properties": {
+                "label": 2
+            }
+        },
+        // Add more points here as needed
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [75.803, 26.863]
+            },
+            "properties": {
+                "label": 3
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [75.804, 26.864]
+            },
+            "properties": {
+                "label": 4
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [75.802, 26.865]
+            },
+            "properties": {
+                "label": 5
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [75.803, 26.866]
+            },
+            "properties": {
+                "label": 6
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [75.801, 26.867]
+            },
+            "properties": {
+                "label": 7
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [75.802, 26.868]
+            },
+            "properties": {
+                "label": 8
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [75.804, 26.867]
+            },
+            "properties": {
+                "label": 9
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [75.805, 26.868]
+            },
+            "properties": {
+                "label": 10
+            }
+        }
+                {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [75.805, 26.868]
+            },
+            "properties": {
+                "label": 10
+            }
+        }
+        {
+            "latitude": 26.866304079427543,
+            "longitude": 75.81257332517086,
+            "label": 1
+        },
+        {
+            "latitude": 26.875097859568683,
+            "longitude": 75.82562986325722,
+            "label": 4
+        },
+        {
+            "latitude": 26.86760873482144,
+            "longitude": 75.82009895267312,
+            "label": 4
+        },
+        {
+            "latitude": 26.85477483080652,
+            "longitude": 75.83007339663348,
+            "label": 2
+        },
+        {
+            "latitude": 26.867978344449195,
+            "longitude": 75.83279366812607,
+            "label": 0
+        },
+        {
+            "latitude": 26.86807000123829,
+            "longitude": 75.81870516015175,
+            "label": 1
+        },
+        {
+            "latitude": 26.858533947961018,
+            "longitude": 75.8210434925487,
+            "label": 2
+        },
+        {
+            "latitude": 26.86117302152081,
+            "longitude": 75.8220831885951,
+            "label": 2
+        },
+        {
+            "latitude": 26.874557182383,
+            "longitude": 75.8104240231644,
+            "label": 3
+        },
+        {
+            "latitude": 26.86350075256963,
+            "longitude": 75.8307119751681,
+            "label": 0
+        },
+        {
+            "latitude": 26.859459117796263,
+            "longitude": 75.80858137052549,
+            "label": 1
+        },
+        // New data points
+        {
+            "latitude": 26.866304079427543,
+            "longitude": 75.81257332517086,
+            "label": 1
+        },
+        {
+            "latitude": 26.867097859568683,
+            "longitude": 75.82462986325722,
+            "label": 4
+        },
+        
+    
+    ];
+
+    // Create a marker layer and add it to the map
+    L.geoJSON(geoJsonData, {
+        pointToLayer: function (feature, latlng) {
+            return L.marker(latlng);
+        }
+    }).addTo(map);
+</script>
+
+</body>
+</html>
