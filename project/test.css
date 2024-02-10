@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@400;500;600&family=Protest+Riot&display=swap');
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA; /* Lighter background for a modern look */
+}
+
+header {
+    background-color: #333333; /* Greyish black */
+    padding: 10px 0; /* Reduced padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add shadow for depth */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Adjusted margin to shift closer to the logo */
+    height: 50%;
+    padding: 0;
+}
+
+.logo {
+    height: 80px; /* Increased size of the logo */
+    margin-right: 10px; /* Adjusted margin to give space between logo and text */
+}
+
+.logo-container h1 {
+    color: #FFFFFF; /* Ensure contrast for readability */
+    margin: 0;
+    font-size: 24px; /* Adjusted for visual balance */
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Added custom font */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px; /* Adjusted spacing */
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 8px 10px; /* Reduced padding */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background-color: #FFA500; /* Orange background for hover */
+    color: #FFFFFF;
+    outline: none;
+}
+
+section {
+    margin: 25px 20px; /* Adjusted for consistency */
+    padding: 25px;
+    background-color: #FFFFFF;
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Soft shadow for depth */
+}
+
+.main-image {
+    width: 100vw; /* Set image width to cover the entire viewport width */
+    height: 100vh; /* Set image height to cover the entire viewport height */
+    opacity: 0.5; /* Set opacity to 50% */
+    position: fixed; /* Position the image relative to the viewport */
+    z-index: -1; /* Ensure the image is behind other content */
+    top: 0; /* Position the image at the top */
+    left: 0; /* Position the image at the left */
+}
+
+.tagline {
+    position: absolute; /* Position the tagline absolutely */
+    top: 25%; /* Center vertically */
+    right: 170px; /* Shift to the right */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    font-size: 40px;
+    font-family: "Poppins", sans-serif;
+    color: #333; /* Adjust color as needed */
+    font-weight: 900;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+/* CSS code */
+.text {
+
+    position: absolute;
+    top: 55%;
+    right: 120px; /* Adjust this value if needed */
+    transform: translateY(-50%);
+    text-align: center; /* Center align the text */
+    max-width: 30%;
+    font-size: medium;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+
+footer {
+    background-color: #333333; /* Greyish black */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Shadow for elevation */
+}
+
+.left-image {
+    position: fixed;
+    top: 51%;
+    left: 7%;
+    transform: translateY(-50%);
+    width: 650px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1;
+}
+
